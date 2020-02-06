@@ -1,0 +1,29 @@
+<%- include("header.ejs") %>
+
+<body>
+    <main>
+        <div>
+            <% findTodo.forEach( (todo) => { %>
+                <ul>
+                    <li>
+                        <%= todo.text %>
+                        <a href="/update/<%= todo._id %>"><button> Update </button></a>
+                        <a href="/delete/<%= todo._id %>"><button> Delete </button></a>
+                    </li>
+                </ul>
+            <% }); %>
+        </div>
+
+        <div>
+            <a href="/?sort=1"><button>Sort: A-Z</button></a>
+            <a href="/?sort=-1"><button>Sort: Z-A</button></a>
+        </div>
+
+        <div>
+            <form method="POST">
+                <input type="text" name="text" placeholder="What do you want to add?">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </main>
+</body>

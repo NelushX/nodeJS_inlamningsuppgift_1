@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    background-image: url("/easter-eggs.jpg");
+    background-size: cover;
+}
+
+main {
+    background-color: white;
+    display: inline-block;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+
+    li {
+        color: red;
+    }
+}
