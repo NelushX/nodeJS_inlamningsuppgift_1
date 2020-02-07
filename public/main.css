@@ -1,18 +1,70 @@
+main .btn, main form input, main form .btn-input {
+  border: 5px solid pink; }
+
+main .btn:hover, main form input:hover, main form .btn-input:hover {
+  border: 5px solid hotpink; }
+
+* {
+  font-weight: bold;
+  font-family: 'Alata', sans-serif; }
+
 body {
   text-align: center;
-  background-image: url("/easter-eggs.jpg");
-  background-size: cover; }
+  font-size: 1.1rem;
+  opacity: 0.9;
+  background: rgba(228, 201, 201, 0.609); }
 
 main {
   background-color: white;
+  color: grey;
   display: inline-block;
-  margin-top: 50px;
-  padding: 50px; }
-
-ul {
-  list-style-type: none;
-  padding: 5px;
-  margin: 10px;
-  text-align: center; }
-  ul li {
-    color: red; }
+  width: 80%;
+  margin: 40px 0px;
+  padding: 30px;
+  -webkit-box-shadow: 13px 25px 20px -5px pink;
+  -moz-box-shadow: 13px 25px 20px -5px pink;
+  box-shadow: 13px 25px 20px -5px pink; }
+  @media (min-width: 1200px) {
+    main {
+      width: 65%; } }
+  main #sort {
+    margin: 20px 0px; }
+    main #sort:hover {
+      color: hotpink; }
+  main i {
+    color: pink; }
+    main i:hover {
+      color: hotpink; }
+  main ul {
+    list-style-type: none;
+    padding: 5px;
+    margin: 10px;
+    position: relative; }
+    main ul li {
+      margin: 5px 0px;
+      text-overflow: ellipsis; }
+    main ul #update {
+      position: absolute;
+      right: 0;
+      padding-right: 20px; }
+    main ul #delete {
+      position: absolute;
+      right: 0; }
+  main .btn {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-decoration: none;
+    margin-top: 10px;
+    color: grey; }
+  main form input {
+    margin: 10px;
+    padding: 10px;
+    outline: none; }
+  main form .btn-input {
+    padding: 10px;
+    background-color: white;
+    color: grey; }
+    main form .btn-input:focus {
+      outline: 0px; }

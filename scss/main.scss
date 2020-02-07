@@ -1,23 +1,109 @@
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+
+$color-grey: grey;
+$color-pink: pink;
+$color-hotpink: hotpink;
+
+%border-pink {
+    border: 5px solid $color-pink;
+}
+
+%btn-hover {
+    border: 5px solid $color-hotpink;
+}
+
+* {
+    font-weight: bold;
+    font-family: 'Alata', sans-serif;
+}
+
 body {
     text-align: center;
-    background-image: url("/easter-eggs.jpg");
-    background-size: cover;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    background: rgba(228, 201, 201, 0.609);
 }
 
 main {
     background-color: white;
+    color: $color-grey;
     display: inline-block;
-    margin-top: 50px;
-    padding: 50px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 5px;
-    margin: 10px;
-    text-align: center;
-
-    li {
-        color: red;
+    width: 80%;
+    margin: 40px 0px;
+    padding: 30px;
+    -webkit-box-shadow: 13px 25px 20px -5px rgba(255,192,203,1);
+    -moz-box-shadow: 13px 25px 20px -5px rgba(255,192,203,1);
+    box-shadow: 13px 25px 20px -5px rgba(255,192,203,1);
+    @include for-desktop-up {
+        width: 65%;
+    }
+    #sort {
+        margin: 20px 0px;
+        &:hover {
+            color: $color-hotpink;
+        }
+    }
+    i {
+        color: $color-pink;
+        &:hover {
+            color: $color-hotpink;
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding: 5px;
+        margin: 10px;
+        position: relative;
+        li {
+            margin: 5px 0px;
+            text-overflow: ellipsis;
+        }
+        #update {
+            position: absolute;
+            right: 0;
+            padding-right: 20px;
+        }
+        #delete {
+            position: absolute;
+            right: 0;
+        }
+    }
+    .btn {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        width: 30px;
+        text-decoration: none;
+        margin-top: 10px;
+        color: $color-grey;
+        @extend %border-pink;
+        &:hover {
+            @extend %btn-hover;
+        }
+    }
+    form {
+        input {
+            margin: 10px;
+            padding: 10px;
+            outline: none;
+            @extend %border-pink;
+            &:hover {
+                @extend %btn-hover;
+            }
+        }
+        .btn-input {
+            padding: 10px;
+            background-color: white;
+            color: $color-grey;
+            @extend %border-pink;
+            &:hover {
+                @extend %btn-hover;
+            }
+            &:focus {
+                outline: 0px;
+            }
+        }
     }
 }
