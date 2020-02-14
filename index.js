@@ -22,3 +22,6 @@ app.get("*", (req, res) => res.send("404"));
 const port = process.env.PORT || 8000;
 mongoose.connect(config.databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(() => app.listen(port, () => console.log(`Connection succeded on port: ${port}`)));
+
+
+module.exports = { app }; // Testing with Kemal

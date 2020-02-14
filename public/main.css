@@ -43,11 +43,11 @@ main {
     main ul li {
       margin: 5px 0px;
       text-overflow: ellipsis; }
-    main ul #update {
+    main ul .update {
       position: absolute;
       right: 0;
       padding-right: 20px; }
-    main ul #delete {
+    main ul .delete {
       position: absolute;
       right: 0; }
   main .btn {
@@ -68,3 +68,6 @@ main {
     color: grey; }
     main form .btn-input:focus {
       outline: 0px; }
+
+.test {
+  color: green; }

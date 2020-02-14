@@ -39,5 +39,8 @@ router.route("/update/:id")
         await Todo.updateOne({ _id: req.params.id }, { $set: { text: req.body.text } }, { runValidators: true });
         res.redirect("/");
     })
+    
+
+router.get("/about", (req, res) => res.render("about", { title: "About" }));  // Testing with Kemal
 
 module.exports = router;

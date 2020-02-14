@@ -12,8 +12,8 @@
                 <ul>
                     <li>
                         <span><%= todo.text %></span>
-                        <a href="/update/<%= todo._id %>"><i class="far fa-edit" id="update"></i></a>
-                        <a href="/delete/<%= todo._id %>"><i class="far fa-trash-alt" id="delete"></i></a>
+                        <a href="/update/<%= todo._id %>"><i class="update far fa-edit"></i></a>
+                        <a href="/delete/<%= todo._id %>"><i class="delete far fa-trash-alt"></i></a>
                     </li>
                 </ul>
             <% }); %>
@@ -27,8 +27,12 @@
         </div>
 
         <div>
-            <a class="btn" href="/?page=1">1</a>
-            <a class="btn" href="/?page=2">2</a>
+            <a class="btn" id="page1" href="/?page=1">1</a>
+            <a class="btn" id="page2" href="/?page=2">2</a>
         </div>
     </main>
+
+    <footer>
+        <a href="/about">About</a>
+    </footer>
 </body>
